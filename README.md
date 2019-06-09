@@ -49,13 +49,13 @@ public class Print {
    > 2. 在本地tomcat的conf目录中，新建Catalina/localhost目录（这里要注意文件名的大小写），然后在该目录下新建一个xml文件，名字不可以随意取，要和path后 的名字一致，我这里就应该是jstore.xml文件，它的具体内容为：
    >
    >    ```xml
-   >    <Context docBase="C:\work\web" path="/jstore" reloadable="true"/>
+   >    <Context docBase="C:\work\web" path="/Demo" reloadable="true"/>
    >    ```
    >
    > 3. 在tomcat中的conf目录下的server.xml文件中，在<Host/>节点中添加一个context，具体为：
    >
    >    ```xml
-   >    <Context Path="/jstore" Docbase="C:\work\WebContent" Debug="0" Privileged="True" Reloadable="True"></Context>
+   >    <Context Path="/Demo" Docbase="C:\work\WebContent" Debug="0" Privileged="True" Reloadable="True"></Context>
    >    ```
    >
    >    > 这里的 Reloadable= “true” 这个属性是指tomcat在运行状态下会自动检测应用程序的WEB-INF/classes和WEB-INF/lib目录下的class文件，如果监测到有class文件有改动，服务器自动加载新的web应用程序，可以在不重起tomcat的情况下改变应用程序，也就是热部署； 
